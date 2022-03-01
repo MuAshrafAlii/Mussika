@@ -1,2 +1,2 @@
 # Mussika
-PHP Music Streaming Website
+Native PHP & MySQL Spotify Clone Website
