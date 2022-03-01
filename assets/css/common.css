@@ -1,0 +1,84 @@
+/* Imports */
+@import url("./fontAwesome/css/all.min.css");
+
+/* Font-Family */
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-Light.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-Light\ Italic.otf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-Book.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-BookItalic.otf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-Medium.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-MediumItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-Bold.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-BoldItalic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-Black.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/Circular/CircularStd-BlackItalic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Other Common Styles */
+*,
+html {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: none;
+  font-family: "Circular", Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+}
