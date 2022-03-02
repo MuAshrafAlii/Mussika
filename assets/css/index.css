@@ -1,22 +1,107 @@
 @import url("./common.css");
 
+#header {
+  width: 78%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 2em;
+}
+
+#header .left {
+  display: flex;
+}
+
+#header .left i:not(#header .left .searchContainer i) {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#header .left .traverseContainer i:nth-of-type(1) {
+  margin: 1em;
+}
+
+#header .left .searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5em;
+}
+
+#header .left .searchContainer * {
+  font-size: 1.5rem;
+}
+
+#header .left .searchContainer div {
+  height: 2em;
+  width: 2.3em;
+}
+
+#header .left .searchContainer i {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.7rem;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em 0em 0em 1em;
+}
+
+#header .left .searchContainer input {
+  min-width: 100%;
+  width: 25em;
+  height: 2em;
+  padding: 0.3em;
+  border-radius: 0 1em 1em 0;
+  outline: none;
+  border: none;
+}
+
+#header .right * {
+  width: 10em;
+  height: 3em;
+  font-size: 1.3rem;
+  margin: 0 0.2em;
+}
+
+#header .right button:first-child {
+  background-color: transparent;
+  color: white;
+}
+
+#header .right button:active {
+  outline: none;
+}
+
 #sideBar {
   width: 22%;
-  height: 100vh;
+  height: 88vh;
   background-color: #000;
   color: #a39696;
   font-size: 1rem;
-  padding: 4em 0;
+  padding: 2em 0;
   position: fixed;
 }
 
 #sideBar .logo {
   text-align: center;
+  cursor: pointer;
 }
 
 #sideBar .logo img {
-  width: 35%;
-  height: 35%;
+  width: 20%;
+  height: 20%;
 }
 
 #sideBar nav > div {
@@ -24,19 +109,11 @@
   padding: 0em 1em;
   cursor: pointer;
   transition: color 0.3s;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -ms-transition: color 0.3s;
-  -o-transition: color 0.3s;
 }
 
 #sideBar nav > div:hover * {
   color: #fff;
   transition: color 0.3s;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -ms-transition: color 0.3s;
-  -o-transition: color 0.3s;
 }
 
 #sideBar .top {
@@ -45,8 +122,8 @@
 }
 
 #sideBar * {
-  font-size: 2rem;
-  margin: 0.1em 0em;
+  font-size: 1.7rem;
+  margin: 0.3em 0em;
 }
 
 #sideBar nav div {
@@ -64,6 +141,44 @@
   margin-right: 0.5em;
 }
 
+#sideBar .middle > div:nth-of-type(1) i,
+#sideBar .middle > div:nth-of-type(2) i {
+  background-color: #c2c0c0;
+  color: black;
+  padding: 0.4em;
+  border-radius: 0.3em;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+#sideBar .middle > div:nth-of-type(2) i {
+  background: rgb(85, 20, 170);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 20, 170, 1) 0%,
+    rgba(37, 150, 136, 1) 100%
+  );
+  color: #fff;
+  filter: brightness(0.6);
+  transition: filter 0.3s;
+}
+
+#sideBar .middle > div:nth-of-type(1):hover i {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+#sideBar .middle > div:nth-of-type(2):hover i {
+  filter: brightness(1);
+  transition: filter 0.3s;
+}
+
+#sideBar div p {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #sideBar .bottom {
   position: absolute;
   bottom: 2em;
@@ -79,6 +194,43 @@
   margin: 0.3em 0em;
 }
 
-.hamburgerIcon {
-  display: none;
+#footer {
+  width: 100%;
+  height: 12vh;
+  background: rgb(170, 20, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(170, 20, 164, 1) 0%,
+    rgba(117, 14, 207, 1) 50%,
+    rgba(31, 185, 165, 1) 100%
+  );
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  font-size: 1rem;
+}
+
+#footer .left {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+#footer .left * {
+  font-size: 1.6rem;
+}
+
+#footer .left p {
+  font-weight: 200;
+  margin-top: 0.3em;
+}
+
+#footer button {
+  width: 15em;
+  height: 2.5em;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: #7255b4;
 }
