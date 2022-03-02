@@ -6,11 +6,12 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0em 2em;
+  z-index: 2;
 }
 
 #header .left {
@@ -192,6 +193,17 @@
   color: #948f8f;
   text-decoration: none;
   margin: 0.3em 0em;
+}
+
+#main {
+  position: fixed;
+  overflow-y: auto;
+  height: 88vh;
+  width: 78%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #121212;
 }
 
 #footer {
