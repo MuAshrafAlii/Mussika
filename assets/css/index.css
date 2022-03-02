@@ -19,11 +19,11 @@
 
 #header .left i:not(#header .left .searchContainer i) {
   background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: #acabab;
   font-size: 2rem;
   padding: 0.5em;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 #header .left .traverseContainer i:nth-of-type(1) {
