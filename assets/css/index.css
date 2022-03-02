@@ -1,1 +1,84 @@
 @import url("./common.css");
+
+#sideBar {
+  width: 22%;
+  height: 100vh;
+  background-color: #000;
+  color: #a39696;
+  font-size: 1rem;
+  padding: 4em 0;
+  position: fixed;
+}
+
+#sideBar .logo {
+  text-align: center;
+}
+
+#sideBar .logo img {
+  width: 35%;
+  height: 35%;
+}
+
+#sideBar nav > div {
+  display: flex;
+  padding: 0em 1em;
+  cursor: pointer;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+
+#sideBar nav > div:hover * {
+  color: #fff;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+
+#sideBar .top {
+  margin: 2em 0px 1em;
+  border-bottom: 1px solid #777676;
+}
+
+#sideBar * {
+  font-size: 2rem;
+  margin: 0.1em 0em;
+}
+
+#sideBar nav div {
+  margin: 0.5em 0em;
+}
+
+#sideBar p {
+  font-weight: 400;
+}
+
+#sideBar i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5em;
+}
+
+#sideBar .bottom {
+  position: absolute;
+  bottom: 2em;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+#sideBar .bottom a {
+  font-size: 1.3rem;
+  color: #948f8f;
+  text-decoration: none;
+  margin: 0.3em 0em;
+}
+
+.hamburgerIcon {
+  display: none;
+}
