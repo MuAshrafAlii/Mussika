@@ -78,12 +78,36 @@ html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  overflow-x: none;
   font-family: "Circular", Georgia, "Times New Roman", Times, serif;
   font-weight: 100;
   font-size: 10px;
 }
 
+::-webkit-scrollbar {
+  /* width */
+  width: 1.2em;
+}
+
+::-webkit-scrollbar-track {
+  /* Track */
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Handle */
+  background-color: #5c5b5b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Handle on hover */
+  background-color: #7c7c7c;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #9c9b9b;
+}
+
+/* Specifics */
 button {
   background: white;
   color: black;

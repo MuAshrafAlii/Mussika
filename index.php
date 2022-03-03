@@ -10,6 +10,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/index.js" defer></script>
     <title>Welcome To Mussika</title>
   </head>
   <body>
