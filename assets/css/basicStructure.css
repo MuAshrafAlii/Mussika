@@ -84,13 +84,14 @@
   margin: 0 0.2em;
 }
 
-#header .right button:first-child {
+#header .right a:nth-child(1) button {
   background-color: transparent;
   color: white;
 }
 
 #header .right button:active {
   outline: none;
+  border: none;
 }
 
 @media (max-width: 910px) {
@@ -99,28 +100,11 @@
   }
   #header .left .traverseContainer i:nth-child(1) {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 750px) {
-  #header .left .searchContainer * {
-    font-size: 1rem;
-  }
-
-  #header .right * {
-    font-size: 1rem;
-  }
-
-  #header .left .traverseContainer i:nth-child(1) {
-    display: inline-block;
-    font-size: 0.8rem;
-  }
-
-  #header .left .searchContainer i {
-    font-size: 1.3rem;
-  }
-
   #header .left {
     display: inline-flex;
     justify-content: center;
@@ -130,6 +114,23 @@
   #header .left .traverseContainer i {
     font-size: 1rem;
   }
+
+  #header .left .traverseContainer i:nth-child(1) {
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+
+  #header .left .searchContainer * {
+    font-size: 1rem;
+  }
+
+  #header .left .searchContainer i {
+    font-size: 1.3rem;
+  }
+
+  #header .right * {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 465px) {
@@ -137,16 +138,16 @@
     font-size: 0.8rem;
   }
 
-  #header .right * {
-    font-size: 0.6rem;
+  #header .left .traverseContainer i {
+    font-size: 0.8rem;
   }
 
   #header .left .searchContainer i {
     font-size: 0.8rem;
   }
 
-  #header .left .traverseContainer i {
-    font-size: 0.8rem;
+  #header .right * {
+    font-size: 0.6rem;
   }
 }
 
@@ -167,7 +168,7 @@
 /* Header Handler */
 
 /* SideBar Handler */
-#sideBar {
+#navBar {
   width: 20%;
   height: 88vh;
   background-color: #000;
@@ -178,67 +179,64 @@
   z-index: 3;
 }
 
-#sideBar.active {
+#navBar * {
+  font-size: 1.7rem;
+  margin: 0.3em 0em;
+}
+
+#navBar.active {
   transform: translateY(100%);
 }
 
-#sideBar .logo {
+#navBar .logo {
   text-align: center;
   cursor: pointer;
 }
 
-#sideBar .logo i {
+#navBar .logo i {
   color: #fff;
   background-color: #1a1919;
   border-radius: 50%;
   display: none;
 }
 
-#sideBar .logo img {
+#navBar .logo img {
   width: 25%;
   height: 25%;
 }
 
-#sideBar nav > div {
+#navBar nav > div {
   display: flex;
   padding: 0em 1em;
   cursor: pointer;
+  margin: 0.5em 0em;
   transition: color 0.3s;
 }
 
-#sideBar nav > div:hover *,
-#sideBar nav > div.active {
+#navBar nav > div:hover *,
+#navBar nav > div.active {
   color: #fff;
   transition: color 0.3s;
 }
 
-#sideBar .top {
+#navBar .top {
   margin: 2em 0px 1em;
   border-bottom: 1px solid #777676;
 }
 
-#sideBar * {
-  font-size: 1.7rem;
-  margin: 0.3em 0em;
-}
-
-#sideBar nav div {
-  margin: 0.5em 0em;
-}
-
-#sideBar p {
+#navBar p {
   font-weight: 400;
 }
 
-#sideBar i {
+#navBar i {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   margin-right: 0.5em;
 }
 
-#sideBar .middle > div:nth-of-type(1) i,
-#sideBar .middle > div:nth-of-type(2) i {
+#navBar .middle > div:nth-of-type(1) i,
+#navBar .middle > div:nth-of-type(2) i {
   background-color: #c2c0c0;
   color: black;
   padding: 0.4em;
@@ -247,7 +245,7 @@
   transition: background-color 0.3s;
 }
 
-#sideBar .middle > div:nth-of-type(2) i {
+#navBar .middle > div:nth-of-type(2) i {
   background: rgb(85, 20, 170);
   background: linear-gradient(
     90deg,
@@ -259,23 +257,23 @@
   transition: filter 0.3s;
 }
 
-#sideBar .middle > div:nth-of-type(1):hover i {
+#navBar .middle > div:nth-of-type(1):hover i {
   background-color: white;
   transition: background-color 0.3s;
 }
 
-#sideBar .middle > div:nth-of-type(2):hover i {
+#navBar .middle > div:nth-of-type(2):hover i {
   filter: brightness(1);
   transition: filter 0.3s;
 }
 
-#sideBar div p {
+#navBar div p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-#sideBar .bottom {
+#navBar .bottom {
   position: absolute;
   bottom: 2em;
   left: 1em;
@@ -283,7 +281,7 @@
   flex-direction: column;
 }
 
-#sideBar .bottom a {
+#navBar .bottom a {
   font-size: 1.3rem;
   color: #948f8f;
   text-decoration: none;
@@ -291,7 +289,7 @@
 }
 
 @media (max-width: 910px) {
-  #sideBar {
+  #navBar {
     display: flex;
     width: 100%;
     height: 20vh;
@@ -301,16 +299,16 @@
     transition: transform 0.5s;
   }
 
-  #sideBar.active {
+  #navBar.active {
     transform: translateY(0%);
     transition: transform 0.5s;
   }
 
-  #sideBar nav:first-of-type {
+  #navBar nav:first-of-type {
     margin: 0px 0px;
   }
 
-  #sideBar .logo {
+  #navBar .logo {
     height: 80%;
     width: 10%;
     display: flex;
@@ -318,89 +316,69 @@
     align-items: center;
   }
 
-  #sideBar .logo i {
+  #navBar .logo i {
     display: inline-block;
   }
 
-  #sideBar .logo img {
+  #navBar .logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  #sideBar .top {
+  #navBar .top {
     border-right: 1px solid #777676;
     border-bottom: none;
   }
 
-  #sideBar * {
+  #navBar * {
     margin: 0em;
   }
 
-  #sideBar .bottom {
+  #navBar .bottom {
     position: static;
   }
 
-  #sideBar * {
+  #navBar * {
     font-size: 1.4rem;
   }
 
-  #sideBar .middle > div:nth-of-type(1) i,
-  #sideBar .middle > div:nth-of-type(2) i {
+  #navBar .middle > div:nth-of-type(1) i,
+  #navBar .middle > div:nth-of-type(2) i {
     font-size: 1.4rem;
   }
 
-  #sideBar .bottom a {
+  #navBar .bottom a {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 580px) {
-  #sideBar * {
+  #navBar * {
     font-size: 1.1rem;
   }
 
-  #sideBar .middle > div:nth-of-type(1) i,
-  #sideBar .middle > div:nth-of-type(2) i {
+  #navBar .middle > div:nth-of-type(1) i,
+  #navBar .middle > div:nth-of-type(2) i {
     font-size: 1.1rem;
   }
 
-  #sideBar .bottom a {
+  #navBar .bottom a {
     font-size: 0.8rem;
   }
 
-  #sideBar .logo {
+  #navBar .logo {
     height: 80%;
     width: 10%;
   }
 
-  #sideBar .logo img {
+  #navBar .logo img {
     width: 100%;
     height: 100%;
   }
 }
 
 /* SideBar Handler */
-
-/* Main Container Handler */
-#main {
-  position: fixed;
-  overflow-y: auto;
-  height: 88vh;
-  width: 80%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #121212;
-}
-
-@media (max-width: 910px) {
-  #main {
-    width: 100%;
-  }
-}
-
-/* Main Container Handler */
 
 /* Footer Handler */
 
@@ -482,3 +460,23 @@
 }
 
 /* Footer Handler */
+
+/* Main Container Handler */
+#main {
+  position: fixed;
+  overflow-y: auto;
+  height: 88vh;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #121212;
+}
+
+@media (max-width: 910px) {
+  #main {
+    width: 100%;
+  }
+}
+
+/* Main Container Handler */

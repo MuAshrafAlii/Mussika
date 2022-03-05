@@ -9,15 +9,11 @@
       href="./assets/imgs/logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./assets/css/basicStructure.css">
-    <script src="./assets/js/basicStructure.js" defer></script>
-    <title>Welcome To Mussika</title>
+    <link rel="stylesheet" href="./assets/css/register_login.css">
+    <script src="./assets/js/register_login.js" defer></script>
+    <title>Create an Account -- Mussika</title>
   </head>
   <body>
-    <?php include("./assets/html/basicStructure.html"); ?>
-
-    <main id="main">
-
-    </main>
+    <?php include("./assets/html/register_login.html"); ?>
   </body>
 </html>
