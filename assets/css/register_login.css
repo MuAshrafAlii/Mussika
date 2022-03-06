@@ -195,6 +195,27 @@ body {
   padding: 0.7em 0.5em;
   outline: none;
   border: 1px solid gray;
+  border-radius: 0.2em;
+}
+
+#formContainer div p.errorText {
+  color: #d31225;
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-top: 0.3em;
+}
+#formContainer div p.errorText i {
+  color: #e2e2e2;
+  background-color: #d31225;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  height: 1em;
+  font-size: 1rem;
+  padding: 0.8em;
+  border-radius: 50%;
 }
 
 #formContainer div input:focus {
@@ -209,7 +230,7 @@ body {
 }
 
 #formContainer form button {
-  background-color: #1fdf64;
+  background-color: #1db954;
   font-size: 1.3rem;
   width: 10em;
   height: 4em;

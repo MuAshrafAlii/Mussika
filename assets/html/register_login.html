@@ -1,6 +1,6 @@
 <header id="header">
   <div class="logo">
-    <img src="./assets/imgs/logo.png" alt="logo" />
+    <a href="./index.php"><img src="./assets/imgs/logo.png" alt="logo" /></a>
   </div>
 </header>
 
@@ -17,35 +17,51 @@
   <p>or</p>
 </nav>
 
-<main id="formContainer">
+<main id="formContainer" class="registerForm loginForm">
   <form action="#">
     <div>
       <p>Username</p>
-      <input type="text" placeholder="Enter your Username" />
+      <input type="text" placeholder="Enter your Username" name="regUserName" />
     </div>
     <div>
       <p>First Name</p>
-      <input type="text" placeholder="Enter your First Name" />
+      <input
+        type="text"
+        placeholder="Enter your First Name"
+        name="regFirstName"
+      />
     </div>
     <div>
       <p>Last Name</p>
-      <input type="text" placeholder="Enter your Last Name" />
+      <input
+        type="text"
+        placeholder="Enter your Last Name"
+        name="regLastName"
+      />
     </div>
     <div>
       <p>Email</p>
-      <input type="email" placeholder="Enter your Email" />
+      <input type="email" placeholder="Enter your Email" name="regEmail" />
     </div>
     <div>
       <p>Confirm Email</p>
-      <input type="email" placeholder="Enter your Email again" />
+      <input
+        type="email"
+        placeholder="Enter your Email again"
+        name="regEmail2"
+      />
     </div>
     <div>
       <p>Password</p>
-      <input type="password" placeholder="Enter your Password" />
+      <input type="password" placeholder="Enter your Password" name="regPw" />
     </div>
     <div>
       <p>Confirm Password</p>
-      <input type="password" placeholder="Enter your Password again" />
+      <input
+        type="password"
+        placeholder="Enter your Password again"
+        name="regPw2"
+      />
     </div>
     <button type="submit">Sign Up</button>
   </form>
@@ -53,11 +69,11 @@
   <form action="#">
     <div>
       <p>Username</p>
-      <input type="text" placeholder="Enter your Username" />
+      <input type="text" placeholder="Enter your Username" name="logUserName" />
     </div>
     <div>
       <p>Password</p>
-      <input type="password" placeholder="Enter your Password" />
+      <input type="password" placeholder="Enter your Password" name="logPw" />
     </div>
 
     <button type="submit">Sign In</button>
