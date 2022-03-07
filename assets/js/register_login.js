@@ -8,8 +8,28 @@ const queryStringParams = new URLSearchParams(window.location.search),
   submitBtn = document.querySelector("#formContainer button"),
   switcher = document.querySelector("#switcher"),
   logo = document.querySelector("#header a img"),
-  formControls = Array.from(document.querySelectorAll("#formContainer input"));
-
+  formControls = document.querySelectorAll("#formContainer input"),
+  regUserName = formContainer.querySelector(
+    "#formContainer input[name='regUserName']"
+  ),
+  regFirstName = formContainer.querySelector(
+    "#formContainer input[name='regFirstName']"
+  ),
+  regLastName = formContainer.querySelector(
+    "#formContainer input[name='regLastName']"
+  ),
+  regEmail = formContainer.querySelector(
+    "#formContainer input[name='regEmail']"
+  ),
+  regEmail2 = formContainer.querySelector(
+    "#formContainer input[name='regEmail2']"
+  ),
+  regPw = formContainer.querySelector("#formContainer input[name='regPw']"),
+  regPw2 = formContainer.querySelector("#formContainer input[name='regPw2']"),
+  logUserName = formContainer.querySelector(
+    "#formContainer input[name='logUserName']"
+  ),
+  logPw = formContainer.querySelector("#formContainer input[name='logPw']");
 //Functions
 (function detectForm() {
   /* IIFE */
@@ -61,7 +81,14 @@ function switchForms() {
   }
 }
 
-function styleError(input, errorMsg) {
+function defaultFormStyle(formControl) {
+  if (formControl.nextElementSibling !== null) {
+    formControl.nextElementSibling.remove();
+  }
+  formControl.style.border = "1px black solid";
+}
+
+function showError(input, errorMsg) {
   if (input.nextElementSibling === null) {
     input.style.border = "1px red solid";
     input.insertAdjacentHTML(
@@ -72,137 +99,119 @@ function styleError(input, errorMsg) {
 }
 
 function regUsernameHandler() {
-  const regUserName = formContainer.querySelector(
-    "#formContainer input[name='regUserName']"
-  );
-
+  defaultFormStyle(regUserName);
   if (regUserName.value === "" || regUserName.value === null) {
-    styleError(regUserName, "Username is required");
+    showError(regUserName, "Username is required");
     return;
   } else if (regUserName.value.length < 3 || regUserName.value.length > 15) {
-    styleError(regUserName, "Username must be between 3 & 15 Characters");
+    showError(regUserName, "Username must be between 3 & 15 Characters");
     return;
   }
 }
 
-function regFirstName() {
-  const regFirstName = formContainer.querySelector(
-    "#formContainer input[name='regFirstName']"
-  );
-
+function regFirstNameHandler() {
+  defaultFormStyle(regFirstName);
   if (regFirstName.value === "" || regFirstName.value === null) {
-    styleError(regUserName, "First Name is required");
+    showError(regFirstName, "First Name is required");
     return;
   } else if (regFirstName.value.length < 3 || regFirstName.value.length > 20) {
-    styleError(regUserName, "First Name must be between 3 & 20 Characters");
+    showError(regFirstName, "First Name must be between 3 & 20 Characters");
     return;
   }
 }
 
 function regLastNameHandler() {
-  const regLastName = formContainer.querySelector(
-    "#formContainer input[name='regLastName']"
-  );
-
+  defaultFormStyle(regLastName);
   if (regLastName.value === "" || regLastName.value === null) {
-    styleError(regLastName, "Last Name is required");
+    showError(regLastName, "Last Name is required");
     return;
   } else if (regLastName.value.length < 3 || regLastName.value.length > 20) {
-    styleError(regLastName, "Last Name must be between 3 & 20 Characters");
+    showError(regLastName, "Last Name must be between 3 & 20 Characters");
     return;
   }
 }
 
-function regEmailHandler() {
-  const regEmail = formContainer.querySelector(
-      "#formContainer input[name='regEmail']"
-    ),
-    regEmail2 = formContainer.querySelector(
-      "#formContainer input[name='regEmail2']"
-    ),
-    emailReg =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+function regEmail1Handler() {
+  const emailReg =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+  defaultFormStyle(regEmail);
+  console.log(regEmail, regEmail2);
 
   if (regEmail.value === "" || regEmail.value === null) {
-    styleError(regEmail, "Email is required");
+    showError(regEmail, "Email is required");
     return;
   } else if (!regEmail.value.match(emailReg)) {
-    styleError(regEmail, "Your Email is Invalid");
-    return;
-  } else if (regEmail !== regEmail2) {
-    styleError(regEmail, "Your Emails do not match");
+    showError(regEmail, "Your Email is Invalid");
     return;
   }
 }
 
-function regPwHandler() {
-  const regPw = formContainer.querySelector(
-      "#formContainer input[name='regPw']"
-    ),
-    regPw2 = formContainer.querySelector("#formContainer input[name='regPw2']"),
-    pwReg = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
+function regEmail2Handler() {
+  defaultFormStyle(regEmail2);
+  if (regEmail.value !== regEmail2.value) {
+    showError(regEmail2, "Your Emails do not match");
+    return;
+  }
+}
+
+function regPw1Handler() {
+  const pwReg = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,30}$/;
+
+  defaultFormStyle(regPw);
 
   if (regPw.value === "" || regPw.value === null) {
-    styleError(regPw, "Password is required");
+    showError(regPw, "Password is required");
     return;
   } else if (regPw.value.length < 6 || regPw.value.length > 30) {
-    styleError(regPw, "Password must be between 6 & 30 Characters");
+    showError(regPw, "Password must be between 6 & 30 Characters");
     return;
   } else if (!regPw.value.match(pwReg)) {
-    styleError(
+    showError(
       regPw,
       "Password must contain at least 1 number and at least 1 special character"
     );
     return;
-  } else if (regPw !== regPw2) {
-    styleError(regPw, "Your Passwords do not match");
+  }
+}
+
+function regPw2Handler() {
+  defaultFormStyle(regPw2);
+  if (regPw.value !== regPw2.value) {
+    showError(regPw2, "Your Passwords do not match");
     return;
   }
 }
 
 function logUsernameHandler() {
-  const logUserName = formContainer.querySelector(
-    "#formContainer input[name='logUserName']"
-  );
+  defaultFormStyle(logUserName);
 
   if (logUserName.value === "" || logUserName.value === null) {
-    styleError(logUserName, "Username is required");
+    showError(logUserName, "Username is required");
     return;
   }
 }
 
 function logPwHandler() {
-  const logPw = formContainer.querySelector(
-    "#formContainer input[name='logPw']"
-  );
+  defaultFormStyle(logPw);
 
   if (logPw.value === "" || logPw.value === null) {
-    styleError(logPw, "Password is required");
+    showError(logPw, "Password is required");
     return;
   }
-}
-
-function formHandler() {
-  formControls.forEach((formControl) => {
-    if (formControl.nextElementSibling !== null) {
-      formControl.nextElementSibling.remove();
-    }
-    formControl.style.border = "1px black solid";
-  });
-
-  regUsernameHandler();
-  regFirstName();
-  regLastNameHandler();
-  regEmailHandler();
-  regPwHandler();
-  logUsernameHandler();
-  logPwHandler();
 }
 
 //Events
 
 switcher.addEventListener("click", switchForms);
 logo.addEventListener("click", () => sessionStorage.removeItem("formType"));
-formControls.forEach((formControl) => {
-  formControl.addEventListener("focusout", formHandler);
-});
+regUserName.addEventListener("focusout", regUsernameHandler);
+regFirstName.addEventListener("focusout", regFirstNameHandler);
+regLastName.addEventListener("focusout", regLastNameHandler);
+regEmail.addEventListener("focusout", regEmail1Handler);
+regEmail2.addEventListener("focusout", regEmail2Handler);
+regPw.addEventListener("focusout", regPw1Handler);
+regPw2.addEventListener("focusout", regPw2Handler);
+logUserName.addEventListener("focusout", logUsernameHandler);
+logPw.addEventListener("focusout", logPwHandler);
+regUserName.addEventListener("focusout", regUsernameHandler);
