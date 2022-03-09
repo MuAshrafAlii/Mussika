@@ -9,6 +9,8 @@ const queryStringParams = new URLSearchParams(window.location.search),
   switcher = document.querySelector("#switcher"),
   logo = document.querySelector("#header a img"),
   formControls = document.querySelectorAll("#formContainer input"),
+  regForm = document.querySelector("#formContainer > form:nth-child(1)"),
+  logForm = document.querySelector("#formContainer > form:nth-child(2)"),
   regUserName = formContainer.querySelector(
     "#formContainer input[name='regUserName']"
   ),
@@ -136,7 +138,6 @@ function regEmail1Handler() {
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   defaultFormStyle(regEmail);
-  console.log(regEmail, regEmail2);
 
   if (regEmail.value === "" || regEmail.value === null) {
     showError(regEmail, "Email is required");
@@ -215,3 +216,11 @@ regPw2.addEventListener("focusout", regPw2Handler);
 logUserName.addEventListener("focusout", logUsernameHandler);
 logPw.addEventListener("focusout", logPwHandler);
 regUserName.addEventListener("focusout", regUsernameHandler);
+
+submitBtn.addEventListener("click", () => {
+  formControls.forEach((formControl) => {
+    if (formControl.nextElementSibling !== null) {
+      console.log(submitBtn.innerText);
+    }
+  });
+});

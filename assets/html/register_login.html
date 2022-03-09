@@ -18,94 +18,103 @@
 </nav>
 
 <main id="formContainer" class="registerForm loginForm">
-  <form action="#">
+  <form action="register_login.php" method="post">
     <div>
-      <p>Username</p>
+      <label for="regUserName"><p>Username</p></label>
       <input
         type="text"
         placeholder="Enter your Username"
         name="regUserName"
+        id="regUserName"
         required
       />
     </div>
     <div>
-      <p>First Name</p>
+      <label for="regFirstName"><p>First Name</p></label>
       <input
         type="text"
         placeholder="Enter your First Name"
         name="regFirstName"
+        id="regFirstName"
         required
       />
     </div>
     <div>
-      <p>Last Name</p>
+      <label for="regLastName"><p>Last Name</p></label>
       <input
         type="text"
         placeholder="Enter your Last Name"
         name="regLastName"
+        id="regLastName"
         required
       />
     </div>
     <div>
-      <p>Email</p>
+      <label for="regEmail"><p>Email</p></label>
       <input
         type="email"
         placeholder="Enter your Email"
         name="regEmail"
+        id="regEmail"
         required
       />
     </div>
     <div>
-      <p>Confirm Email</p>
+      <label for="regEmail2"><p>Confirm Email</p></label>
       <input
         type="email"
         placeholder="Enter your Email again"
         name="regEmail2"
+        id="regEmail2"
         required
       />
     </div>
     <div>
-      <p>Password</p>
+      <label for="regPw"><p>Password</p></label>
       <input
         type="password"
         placeholder="Enter your Password"
         name="regPw"
+        id="regPw"
         required
       />
     </div>
     <div>
-      <p>Confirm Password</p>
+      <label for="regPw2"><p>Confirm Password</p></label>
       <input
         type="password"
         placeholder="Enter your Password again"
         name="regPw2"
+        id="regPw2"
         required
       />
     </div>
-    <button type="submit">Sign Up</button>
+    <button type="submit" name="regBtn">Sign Up</button>
   </form>
 
-  <form action="#">
+  <form action="register_login.php" method="post">
     <div>
-      <p>Username</p>
+      <label for="logUserName"> <p>Username</p> </label>
       <input
         type="text"
         placeholder="Enter your Username"
         name="logUserName"
+        id="logUserName"
         required
       />
     </div>
     <div>
-      <p>Password</p>
+      <label for="logPw"> <p>Password</p></label>
       <input
         type="password"
         placeholder="Enter your Password"
         name="logPw"
+        id="logPw"
         required
       />
     </div>
 
-    <button type="submit">Sign In</button>
+    <button type="submit" name="loginBtn">Sign In</button>
   </form>
 </main>
 

@@ -14,6 +14,9 @@
     <title>Create an Account -- Mussika</title>
   </head>
   <body>
-    <?php include("./assets/html/register_login.html"); ?>
+    <?php 
+      require_once("./assets/html/register_login.html");
+      require_once("./assets/php/register_loginPHP.php");
+    ?>
   </body>
 </html>
