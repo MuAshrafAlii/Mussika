@@ -1,12 +1,7 @@
 <?php
 
-if(isset($_POST['regBtn'])) {
-    print_r($_POST['loginBtn']); echo "WHAAT";
-}
-
-    if(isset($_POST['loginBtn'])) {
-        print_r($_POST['loginBtn']); echo "WHAAT";
-    }
+require_once("./assets/php/handlers/loginHandler.php");
+require_once("./assets/php/handlers/registerHandler.php");
     
 
 ?>
