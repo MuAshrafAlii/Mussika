@@ -1,6 +1,9 @@
 <?php
-// This is your gate to the website, it handles your register & Login
+$account = new Gate($dbConnect);
+
+
 class Gate {
+    private $con;
     private $errorArray = array();
     const ERRORS = [
         "shortUN" => "Username must be between 5 & 25 Characters",
@@ -12,7 +15,12 @@ class Gate {
         "differentPW" => "Your Passwords Do Not Match",
         "alphanumericPW" => "Your Password can only contain numbers and letters",
     ];
-
+    
+    function __construct($con)
+    {
+        $this->con = $con;
+    }
+    
     function register($un,$fn,$ln,$em,$em2,$pw,$pw2) {
         $this -> validateUsername($un);
         $this -> validateFirstName($fn);
@@ -21,11 +29,18 @@ class Gate {
         $this -> validatePasswords($pw,$pw2);
 
         if(empty($this->errorArray)) {
-            echo "weeeee";
+            $this->insertUserData($un,$fn,$ln,$em,$pw);
         }
         else {
             return false;
         }
+    }
+
+    private function insertUserData($un,$fn,$ln,$em,$pw) {
+        $hashedPW = password_hash($pw, PASSWORD_DEFAULT);
+        $date = date("Y-m-d H:i:s");
+        $ppPath = "./assets/imags/profilePics/defaultPP.png";
+        $insQuery = mysqli_query($this->con, "INSERT INTO users VALUES('', '$un', '$fn', '$ln', '$em', '$hashedPW', '$date', '$ppPath')");
     }
 
     private function validateUsername($un) {
@@ -85,7 +100,5 @@ class Gate {
     }
 
 }
-
-$account = new Gate;
 
 ?>

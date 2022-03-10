@@ -14,7 +14,10 @@
     <title>Welcome To Mussika</title>
   </head>
   <body>
-    <?php include("./assets/html/basicStructure.html"); ?>
+    <?php 
+      require_once("./assets/html/basicStructure.html"); 
+      require_once("./assets/php/handlers/configHandler.php");
+    ?>
 
     <main id="main">
 

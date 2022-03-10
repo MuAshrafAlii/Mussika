@@ -16,6 +16,7 @@
   <body>
     <?php 
       require_once("./assets/html/register_login.html");
+      require_once("./assets/php/handlers/configHandler.php");
       require_once("./assets/php/register_loginPHP.php");
     ?>
   </body>
