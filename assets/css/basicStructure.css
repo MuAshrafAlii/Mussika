@@ -394,6 +394,7 @@
   );
   position: fixed;
   bottom: 0px;
+  left: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -446,6 +447,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 65px;
   }
 
   #footer button {

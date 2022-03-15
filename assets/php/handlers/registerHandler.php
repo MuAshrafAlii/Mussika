@@ -1,5 +1,5 @@
 <?php
-require_once("./assets/php/classes/Gate.php");
+require_once("./assets/php/classes/Account.php");
 
 if(isset($_POST['regBtn'])) {
     extract($_POST);

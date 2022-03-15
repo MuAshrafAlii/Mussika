@@ -1,8 +1,8 @@
 <?php
-$account = new Gate($dbConnect);
+$account = new Account($dbConnect);
 
 
-class Gate {
+class Account {
     private $con;
     private $errorArray = array();
     const ERRORS = [

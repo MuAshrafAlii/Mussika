@@ -81,6 +81,8 @@ html {
   font-family: "Circular", Georgia, "Times New Roman", Times, serif;
   font-weight: 100;
   font-size: 10px;
+  --primaryColor: #ffb606;
+  --secondaryColor: #b28228;
 }
 
 ::-webkit-scrollbar {

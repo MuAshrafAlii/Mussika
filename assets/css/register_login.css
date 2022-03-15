@@ -230,7 +230,7 @@ body {
 }
 
 #formContainer form button {
-  background-color: #c39200;
+  background-color: var(--primaryColor);
   font-size: 1.3rem;
   width: 10em;
   height: 4em;
@@ -239,7 +239,7 @@ body {
 }
 
 #formContainer form button:active {
-  background-color: #806000;
+  background-color: var(--secondaryColor);
   color: #fff;
   transition: background-color 0.3s, transform 0.2s, outline 0.2s;
 }
