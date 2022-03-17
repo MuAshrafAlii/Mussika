@@ -1,7 +1,7 @@
 @import url("./common.css");
 
 main {
-  padding: 14vh 3vw 4vh;
+  padding: 14vh 3vw;
   overflow-y: auto;
 }
 
