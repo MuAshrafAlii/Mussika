@@ -1,35 +1,41 @@
+<!-- Header Section -->
 <header id="header">
   <div class="left">
     <div class="traverseContainer">
-      <i class="fa-solid fa-arrow-down"></i>
-      <i class="fa-solid fa-angle-left"></i>
-      <i class="fa-solid fa-angle-right"></i>
+      <i class="fa-solid fa-arrow-down traverseDown"></i>
+      <i class="fa-solid fa-angle-left traverseLeft"></i>
+      <i class="fa-solid fa-angle-right traverseRight"></i>
     </div>
     <div class="searchContainer">
       <div class="searchIconContainer">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-magnifying-glass searchIcon"></i>
       </div>
-      <form action="#">
-        <input type="text" placeholder="Albums, Artists, Songs" />
+      <form action="#" class="searchForm">
+        <input
+          type="text"
+          placeholder="Albums, Artists, Songs"
+          class="searchInput"
+        />
       </form>
     </div>
   </div>
 
   <div class="right">
-    <a href="./register_login.php?formType=registerForm"
-      ><button>Sign Up</button></a
-    >
-    <a href="./register_login.php?formType=loginForm"><button>LogIn</button></a>
+    <a href="#"><button class="signUpBtn">Sign Up</button></a>
+    <a href="#"><button>LogIn</button></a>
   </div>
 </header>
+<!-- Header Section -->
 
 <aside id="navBar">
   <div class="logo">
-    <i class="fa-solid fa-arrow-up"></i>
-    <a href="./index.php"> <img src="assets/imgs/logo.png" alt="logo" /></a>
+    <i class="fa-solid fa-arrow-up navUpIcon"></i>
+    <a href="#">
+      <img src="assets/imgs/logo.png" alt="logo" class="logoImg"
+    /></a>
   </div>
 
-  <nav class="top">
+  <nav class="top navContainer">
     <div class="active">
       <i class="fa-solid fa-house"></i>
       <p>Home</p>
@@ -43,34 +49,34 @@
       <p>Your Library</p>
     </div>
   </nav>
-  <nav class="middle">
-    <div>
+  <nav class="middle navContainer">
+    <div class="createPlaylistContainer">
       <i class="fa-solid fa-plus"></i>
       <p>Create Playlist</p>
     </div>
-    <div>
+    <div class="likedSongsContainer">
       <i class="fa-solid fa-heart"></i>
       <p>Liked Songs</p>
     </div>
   </nav>
-  <nav class="bottom">
+  <nav class="bottom navContainer">
     <a href="#">Cookies</a>
     <a href="#">Privacy</a>
   </nav>
 </aside>
 
 <footer id="footer">
-  <div class="left">
-    <h1>Preview Of Mussika</h1>
-    <p>
-      Sign Up to get Unlimited Songs & Podcasts With Occasional Ads. No Credit
-      Card Needed
-    </p>
-  </div>
+  <div class="signUpPreview">
+    <div class="left">
+      <h1>Preview Of Mussika</h1>
+      <p class="footerP">
+        Sign Up to get Unlimited Songs & Podcasts With Occasional Ads. No Credit
+        Card Needed
+      </p>
+    </div>
 
-  <div class="right">
-    <a href="./register_login.php?formType=registerForm">
-      <button>Sign Up Free</button></a
-    >
+    <div class="right">
+      <a href="#"> <button class="footerBtn">Sign Up Free</button></a>
+    </div>
   </div>
 </footer>

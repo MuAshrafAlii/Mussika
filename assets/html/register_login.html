@@ -1,24 +1,26 @@
 <header id="header">
   <div class="logo">
-    <a href="./index.php"><img src="./assets/imgs/logo.png" alt="logo" /></a>
+    <a href="./index.php"
+      ><img src="./assets/imgs/logo.png" alt="logo" class="logoImg"
+    /></a>
   </div>
 </header>
 
 <nav id="nav">
   <h1>Sign Up For Free to start listening.</h1>
-  <button>
+  <button class="fbBtn">
     <img src="./assets/imgs/icons/fb.png" alt="facebook" />
     <p>Sign up with Facebook</p>
   </button>
-  <button>
+  <button class="googleBtn">
     <img src="./assets/imgs/icons/google.png" alt="google" />
     <p>Sign up with Google</p>
   </button>
   <p>or</p>
 </nav>
 
-<main id="formContainer" class="registerForm loginForm">
-  <form action="register_login.php" method="post">
+<main id="formContainer">
+  <form action="register_login.php" method="post" class="regForm">
     <div>
       <label for="regUserName"><p>Username</p></label>
       <input
@@ -92,7 +94,7 @@
     <button type="submit" name="regBtn">Sign Up</button>
   </form>
 
-  <form action="register_login.php" method="post">
+  <form action="register_login.php" method="post" class="logForm">
     <div>
       <label for="logUserName"> <p>Username</p> </label>
       <input

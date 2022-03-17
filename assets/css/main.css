@@ -1,0 +1,104 @@
+@import url("./common.css");
+
+main {
+  padding: 14vh 3vw 4vh;
+  overflow-y: auto;
+}
+
+#albumSection {
+  color: #fff;
+  width: 100%;
+  min-height: 80vh;
+  text-align: center;
+}
+
+#albumSection > h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+#albumSection .albums {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#albumSection .albumContainer {
+  width: 200px;
+  height: 250px;
+  background-color: #2e2e2e;
+  margin: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: backround-color 0.3s;
+}
+
+#albumSection .albumContainer:hover {
+  background-color: #414040;
+  transition: backround-color 0.3s;
+}
+
+#albumSection .albumContainer:hover .playIcon {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.8s ease-out, opacity 0.6s;
+}
+
+#albumSection .coverContainer {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/602f4731226337.5646928c3633f.jpg");
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  width: 80%;
+  height: 60%;
+  margin: 15px auto 5px;
+}
+
+#albumSection .albumContainer:nth-child(2n) .coverContainer {
+  background-image: url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/artistic-album-cover-design-template-d12ef0296af80b58363dc0deef077ecc_screen.jpg?ts=1561488440");
+}
+
+#albumSection .albumContainer:nth-child(3n) .coverContainer {
+  background-image: url("https://play-lh.googleusercontent.com/tRkbdD6Uzswddw6x_yUcCZwadfM1AXgg2PxykzgNUfPPdOYYoUkIpVXHDqrds4UdaL8");
+}
+
+#albumSection .playIcon {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 2rem;
+  background-color: var(--primaryColor);
+  color: #000;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  opacity: 0;
+  cursor: default;
+  transition: transform 0.8s ease-out, opacity 0.6s;
+}
+
+#albumSection .albumTitle {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#albumSection .albumDetails {
+  font-size: 1.2rem;
+  padding: 0em 1.5em;
+  color: #808080;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

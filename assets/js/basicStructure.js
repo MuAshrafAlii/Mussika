@@ -1,19 +1,17 @@
 // Constants & Variables
 const navBar = document.querySelector("#navBar"),
-  navBarShower = document.querySelector(
-    "#header .left .traverseContainer i:nth-child(1)"
-  ),
-  navBarHidder = document.querySelector("#navBar .logo i");
-
-// Functions
-function shownavBar() {
-  navBar.classList.add("active");
-}
-
-function hidenavBar() {
-  navBar.classList.remove("active");
-}
+  navBarShower = document.querySelector("#header .traverseDown"),
+  navBarHidder = document.querySelector("#navBar .navUpIcon"),
+  mainContainer = document.querySelector("main"),
+  header = document.querySelector("#header");
 
 // Event Listners
-navBarShower.addEventListener("click", shownavBar);
-navBarHidder.addEventListener("click", hidenavBar);
+navBarShower.addEventListener("click", () => navBar.classList.add("active"));
+navBarHidder.addEventListener("click", () => navBar.classList.remove("active"));
+mainContainer.addEventListener("scroll", (e) => {
+  if (e.target.scrollTop > 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});

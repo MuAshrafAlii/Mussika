@@ -10,17 +10,17 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/basicStructure.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <script src="./assets/js/basicStructure.js" defer></script>
     <title>Welcome To Mussika</title>
   </head>
   <body>
     <?php 
       require_once("./assets/html/basicStructure.html"); 
-      require_once("./assets/php/handlers/configHandler.php");
     ?>
 
     <main id="main">
-
+    <?php require_once("./assets/html/main.html"); ?>
     </main>
   </body>
 </html>

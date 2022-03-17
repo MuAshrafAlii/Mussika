@@ -31,7 +31,7 @@ body {
   background-color: #b4b2b2;
 }
 
-#header .logo img {
+#header .logoImg {
   width: 10%;
   height: 10%;
   cursor: pointer;
@@ -62,13 +62,13 @@ body {
   align-items: center;
 }
 
-#nav button:nth-of-type(1) {
+#nav .fbBtn {
   background-color: #384f81;
   color: #fff;
   margin: 1.5em 0em;
 }
 
-#nav button:nth-of-type(2) {
+#nav .googleBtn {
   border: 1px black solid;
   margin-bottom: 1em;
 }
@@ -85,7 +85,7 @@ body {
   margin-left: 0.1em;
 }
 
-#nav button:nth-of-type(2) p {
+#nav .googleBtn p {
   color: #575656;
 }
 
@@ -132,6 +132,10 @@ body {
     font-size: 2rem;
   }
 
+  #nav button {
+    min-height: 40px;
+  }
+
   #nav button p {
     font-size: 1rem;
   }
@@ -171,11 +175,11 @@ body {
   font-size: 1rem;
 }
 
-#formContainer.registerForm form:nth-child(2) {
+#formContainer.registerForm .logForm {
   display: none;
 }
 
-#formContainer.loginForm form:nth-child(1) {
+#formContainer.loginForm .regForm {
   display: none;
 }
 
@@ -198,13 +202,13 @@ body {
   border-radius: 0.2em;
 }
 
-#formContainer div p.errorText {
+#formContainer p.errorText {
   color: #d31225;
   font-weight: 100;
   font-size: 1.5rem;
   margin-top: 0.3em;
 }
-#formContainer div p.errorText i {
+#formContainer p.errorText i {
   color: #e2e2e2;
   background-color: #d31225;
   text-align: center;
@@ -281,15 +285,14 @@ body {
 
 /* switcher */
 
-#switcher p,
-#switcher span {
+#switcher * {
   font-size: 1.8rem;
   font-weight: 200;
   margin: 1em 0em;
   cursor: pointer;
 }
 
-#switcher p span {
+#switcher span {
   color: #775900;
   text-decoration: underline;
   margin-left: 0.3em;
