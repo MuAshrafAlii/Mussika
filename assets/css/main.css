@@ -49,9 +49,10 @@ main {
 }
 
 #albumSection .coverContainer {
-  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/602f4731226337.5646928c3633f.jpg");
+  background-image: url("../imgs/albums/album1.jpg");
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   width: 80%;
   height: 60%;
@@ -59,11 +60,11 @@ main {
 }
 
 #albumSection .albumContainer:nth-child(2n) .coverContainer {
-  background-image: url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/artistic-album-cover-design-template-d12ef0296af80b58363dc0deef077ecc_screen.jpg?ts=1561488440");
+  background-image: url("../imgs/albums/album2.jpg");
 }
 
 #albumSection .albumContainer:nth-child(3n) .coverContainer {
-  background-image: url("https://play-lh.googleusercontent.com/tRkbdD6Uzswddw6x_yUcCZwadfM1AXgg2PxykzgNUfPPdOYYoUkIpVXHDqrds4UdaL8");
+  background-image: url("../imgs/albums/album3.png");
 }
 
 #albumSection .playIcon {
