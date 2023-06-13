@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/logo.png"
+      type="image/x-icon"
+    />
+    <script src="./assets/js/register_login.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/register_login.css" />
+    <title>Create an Account -- Mussika</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./assets/imgs/logo.png" alt="logo" class="logoImg"
+        /></a>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <h1>Sign Up For Free to start listening.</h1>
+      <button class="fbBtn">
+        <img src="./assets/imgs/icons/fb.png" alt="facebook" />
+        <p>Sign up with Facebook</p>
+      </button>
+      <button class="googleBtn">
+        <img src="./assets/imgs/icons/google.png" alt="google" />
+        <p>Sign up with Google</p>
+      </button>
+      <p>or</p>
+    </nav>
+
+    <main id="formContainer">
+      <form action="register_login.php" method="post" class="regForm">
+        <div>
+          <label for="regUserName"><p>Username</p></label>
+          <input
+            type="text"
+            placeholder="Enter your Username"
+            name="regUserName"
+            id="regUserName"
+            required
+          />
+        </div>
+        <div>
+          <label for="regFirstName"><p>First Name</p></label>
+          <input
+            type="text"
+            placeholder="Enter your First Name"
+            name="regFirstName"
+            id="regFirstName"
+            required
+          />
+        </div>
+        <div>
+          <label for="regLastName"><p>Last Name</p></label>
+          <input
+            type="text"
+            placeholder="Enter your Last Name"
+            name="regLastName"
+            id="regLastName"
+            required
+          />
+        </div>
+        <div>
+          <label for="regEmail"><p>Email</p></label>
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            name="regEmail"
+            id="regEmail"
+            required
+          />
+        </div>
+        <div>
+          <label for="regEmail2"><p>Confirm Email</p></label>
+          <input
+            type="email"
+            placeholder="Enter your Email again"
+            name="regEmail2"
+            id="regEmail2"
+            required
+          />
+        </div>
+        <div>
+          <label for="regPw"><p>Password</p></label>
+          <input
+            type="password"
+            placeholder="Enter your Password"
+            name="regPw"
+            id="regPw"
+            required
+          />
+        </div>
+        <div>
+          <label for="regPw2"><p>Confirm Password</p></label>
+          <input
+            type="password"
+            placeholder="Enter your Password again"
+            name="regPw2"
+            id="regPw2"
+            required
+          />
+        </div>
+        <button type="submit" name="regBtn">Sign Up</button>
+      </form>
+
+      <form action="register_login.php" method="post" class="logForm">
+        <div>
+          <label for="logUserName"> <p>Username</p> </label>
+          <input
+            type="text"
+            placeholder="Enter your Username"
+            name="logUserName"
+            id="logUserName"
+            required
+          />
+        </div>
+        <div>
+          <label for="logPw"> <p>Password</p></label>
+          <input
+            type="password"
+            placeholder="Enter your Password"
+            name="logPw"
+            id="logPw"
+            required
+          />
+        </div>
+
+        <button type="submit" name="loginBtn">Sign In</button>
+      </form>
+    </main>
+
+    <section id="switcher">
+      <p>Have an Account?<span>Sign In.</span></p>
+    </section>
+
+    <script src="./assets/js/register_login.js"></script>
+  </body>
+</html>
